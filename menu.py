@@ -458,32 +458,6 @@ def mathsmenu():
             height=1,
             command=lambda: [mathroot.destroy(), recall_window()]).grid()
 
-    #####  Scroll bar  ##########
-    scrollbar = Scrollbar(mathroot)
-    scrollbar.grid(side=RIGHT, fill=Y)
-
-    mylist = Listbox(mathroot, yscrollcommand=scrollbar.set)
-
-    mylist.insert(END, Label)
-    mylist.insert(END, b1)
-    mylist.insert(END, b2)
-    mylist.insert(END, b3)
-    mylist.insert(END, b4)
-    mylist.insert(END, b5)
-    mylist.insert(END, b6)
-    mylist.insert(END, b7)
-    mylist.insert(END, b8)
-    mylist.insert(END, b9)
-    mylist.insert(END, b10)
-    mylist.insert(END, b11)
-    mylist.insert(END, exitb)
-
-    mylist.grid(side=LEFT, fill=BOTH)
-
-    scrollbar.config(command=mathroot.yview)
-
-    ###############################
-
 ####################################
 
 def chemistrysmenu():
