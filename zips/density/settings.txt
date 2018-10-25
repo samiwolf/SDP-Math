@@ -1,0 +1,1 @@
+{"mass": 350, "radius": 0.5001276810859448,"volume": 0.524, "density": 667.93893, "fluid density": 1000, "air density": 1.29, "scale": 200}

@@ -1,0 +1,7 @@
+*.pyc
+*~
+data/icons/
+visualequation.egg-info/
+build/
+dist/
+env/
