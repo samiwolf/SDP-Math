@@ -56,13 +56,13 @@ class OpenNewWindow(Window):
 
         self.heightInputLabel = ttk.Label(self.contentframe, text='Height:')
         self.heightInputTest = ttk.Entry(self.contentframe, width=30, validate='focusout',
-                                    validatecommand=(self.validate_notempty))
+                                         validatecommand=(self.validate_notempty))
         self.widthInputLabel = ttk.Label(self.contentframe, text='Width:')
         self.widthInputTest = ttk.Entry(self.contentframe, width=30, validate='focusout',
-                                    validatecommand=(self.validate_notempty))
+                                        validatecommand=(self.validate_notempty))
         self.sizeInputLabel = ttk.Label(self.contentframe, text='Size:')
         self.sizeInputTest = ttk.Entry(self.contentframe, width=30, validate='focusout',
-                                    validatecommand=(self.validate_notempty))
+                                       validatecommand=(self.validate_notempty))
 
         self.runButton = ttk.Button(self.parent, text='Run', command=self.do_something)
         self.cancelButton = ttk.Button(self.parent, text='Cancel', command=self.close_win)
@@ -95,15 +95,15 @@ class OpenNewWindow(Window):
         width = self.widthInputTest.get().strip()
         size = self.sizeInputTest.get().strip()
 
-
         if (height is "" or width is "" or size is ""):
             print("Error: Field must not be empty.")
 
         else:
             # Do things with text
             print(height + width + size)
-            GameofLife2.game(int(height),int(width),int(size))
+            GameofLife2.game(int(height), int(width), int(size))
             self.close_win()
+
 
 class GUI(ttk.Frame):
     """Main GUI class"""
@@ -126,7 +126,6 @@ class GUI(ttk.Frame):
         self.parent.grid_columnconfigure(0, weight=1)
         self.parent.grid_rowconfigure(0, weight=1)
         self.parent.option_add('*tearOff', 'FALSE')  # Disables ability to tear menu bar into own window
-
 
         # Create Widgets
         self.btn = ttk.Button(self, text='Game of Life', command=self.openwindow)
