@@ -106,7 +106,7 @@ class MyGui:    #(fold)
         self.error_label['text']="Error Percentage: {0:>0.6f}".format(4.0/3-total_area)
 # (end)
 
-if __name__ == '__main__':
+def run():
     thegui = MyGui()
     thegui.initGui()
-
+run()

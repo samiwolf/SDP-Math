@@ -127,6 +127,10 @@ def run_newton_iteration():
     from math_done import newton_iteration
     root.execfile('newton_iteration.py')
 
+def run_riemann_sum():
+    from math_done import RiemannSum
+    root.execfile('RiemannSum.py')
+
 def run_taylor_series():
     from math_done import taylor_series
     root.execfile('taylor_series.py')
@@ -440,12 +444,25 @@ def mathsmenu():
     b11 = Button(mathroot,
                 bg="gray",
                 fg="white",
+                text="Riemann Sum",
+                bd=12,
+                relief="raised",
+                font="Calibri 9 bold",
+                command=run_riemann_sum,
+                width=30).grid()
+
+    '''
+
+    b12 = Button(mathroot,
+                bg="gray",
+                fg="white",
                 text="Taylor Series",
                 bd=12,
                 relief="raised",
                 font="Calibri 9 bold",
                 command=run_taylor_series,
                 width=30).grid()
+    '''
 
     exitb = Button(mathroot,
             bg="gray",
