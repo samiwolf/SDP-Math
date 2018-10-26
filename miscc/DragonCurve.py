@@ -5,8 +5,10 @@ def turn(i):
     left = (((i & -i) << 1) & i) != 0
     return 'L' if left else 'R'
 
+
 def curve(iteration):
     return ''.join([turn(i + 1) for i in range(2 ** iteration - 1)])
+
 
 def run(radius):
     turtle.showturtle()
@@ -25,5 +27,5 @@ def run(radius):
     except turtle.Terminator:
         print("Early Termination")
 
-run(5)
 
+run(5)

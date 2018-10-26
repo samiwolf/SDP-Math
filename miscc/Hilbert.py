@@ -6,8 +6,8 @@ myTurtle.hideturtle()
 turtle.title("Hilbert's Space Filling Curve Simulation")
 myTurtle.speed(0)
 
-def hilbert2(size, rule, angle, depth):
 
+def hilbert2(size, rule, angle, depth):
     if depth > 0:
         try:
             antiClockWise = lambda: hilbert2(size, "anticlockwise", angle, depth - 1)

@@ -1,6 +1,7 @@
 import pygame
 import random
 
+
 class Ant:
     def __init__(self):
         self.nodes = {}
@@ -9,11 +10,11 @@ class Ant:
         self.width = 640
         self.height = 480
 
-        self.backg_color = (255,255,255)
-        self.pixel_color = (0,0,0)
+        self.backg_color = (255, 255, 255)
+        self.pixel_color = (0, 0, 0)
 
-        self.ant_start_x = random.randint(50,self.width)/self.node_size
-        self.ant_start_y = random.randint(50,self.height)/self.node_size
+        self.ant_start_x = random.randint(50, self.width) / self.node_size
+        self.ant_start_y = random.randint(50, self.height) / self.node_size
         self.ant_x = self.ant_start_x
         self.ant_y = self.ant_start_y
         self.ant_dir = "up"
@@ -89,11 +90,11 @@ class Ant:
             del self.nodes[killNode]
 
         if createNode is not None:
-            if createNode[0] > 0 and createNode[0] < self.width/self.node_size:
-                if createNode[1] > 0 and createNode[1] < self.height/self.node_size:
+            if createNode[0] > 0 and createNode[0] < self.width / self.node_size:
+                if createNode[1] > 0 and createNode[1] < self.height / self.node_size:
                     self.nodes[createNode] = 1
-                    pygame.draw.rect(self.screen, self.pixel_color, (createNode[0]*self.node_size, createNode[1]*self.node_size, self.node_size, self.node_size))
-
+                    pygame.draw.rect(self.screen, self.pixel_color, (
+                    createNode[0] * self.node_size, createNode[1] * self.node_size, self.node_size, self.node_size))
 
     def event(self, event):
         if event.type == pygame.QUIT:
@@ -104,11 +105,13 @@ class Ant:
 
     def render(self):
         # draw ant at current position
-        pygame.draw.rect(self.screen, self.ant_color(), (self.ant_x*self.node_size, self.ant_y*self.node_size, self.node_size, self.node_size))
+        pygame.draw.rect(self.screen, self.ant_color(),
+                         (self.ant_x * self.node_size, self.ant_y * self.node_size, self.node_size, self.node_size))
         pygame.display.flip()
 
     def cleanup(self):
         pygame.quit()
+
 
 def run():
     ant = Ant()

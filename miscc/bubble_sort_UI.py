@@ -2,7 +2,8 @@ import tkinter
 # Lots of tutorials have from tkinter import *, but that is pretty much always a bad idea
 from tkinter import ttk
 import abc
-from misc import bubble_sort
+from miscc import bubble_sort
+
 
 class Window(ttk.Frame):
     """Abstract base class for a popup window"""
@@ -16,7 +17,6 @@ class Window(ttk.Frame):
         self.validate_notempty = (self.register(self.notEmpty),
                                   '%P')  # Creates Tcl wrapper for python function. %P = new contents of field after the edit.
         self.init_gui()
-
 
     @abc.abstractmethod  # Must be overwriten by subclasses
     def init_gui(self):
@@ -56,7 +56,7 @@ class OpenNewWindow(Window):
 
         self.heightInputLabel = ttk.Label(self.contentframe, text='Array:')
         self.heightInputTest = ttk.Entry(self.contentframe, width=30, validate='focusout',
-                                    validatecommand=(self.validate_notempty))
+                                         validatecommand=(self.validate_notempty))
 
         self.runButton = ttk.Button(self.parent, text='Run', command=self.do_something)
         self.cancelButton = ttk.Button(self.parent, text='Cancel', command=self.close_win)
@@ -92,4 +92,6 @@ def run():
     root2 = tkinter.Tk()
     OpenNewWindow(root2)
     root2.mainloop()
+
+
 run()

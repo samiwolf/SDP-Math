@@ -11,6 +11,7 @@ def iterate(z, c, k=0):
         return int(k * k / 255)
     return iterate(z ** 2 + c, c, k + step)
 
+
 def run():
     scale = 80
     mx0, jx0, y0 = -2.5, -1.9, -1.5

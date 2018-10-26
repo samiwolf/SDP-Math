@@ -1,6 +1,5 @@
 import turtle
 
-
 my_turtle = turtle.Turtle()
 my_turtle.hideturtle()
 my_turtle.speed(10)
@@ -39,7 +38,7 @@ def run(vertices, level):
         # draw first segment of fractal
         # the vertices being passed in are the bottom corner of the first
         # section, the bottom corner of the second section, and the bottom
-        # corner of the third secion.
+        # corner of the third section.
         try:
             run([vertices[0],
                  midpoint(vertices[0], vertices[1]),
@@ -58,11 +57,7 @@ def run(vertices, level):
             exit()
 
 
-
-
-
 vertices = [[-200, -100], [0, 200], [200, -100]]
 level = 4  # how many recursions deep do we want to draw the fractal
-
 
 run(vertices, level)

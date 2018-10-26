@@ -37,7 +37,7 @@ app.grid()
 # Button Events
 #############################################################
 
-########   Physics Functions   #########
+#   Physics Functions #
 
 def run_double_pendulum():
     from phy import DoublePendulum
@@ -158,77 +158,77 @@ def run_taylor_series():
 ########   Misc Functions   #########
 
 def run_barnsley_fern():
-    from misc import BarnsleyFern
+    from miscc import BarnsleyFern
     root.execfile('BarnsleyFern.py')
 
 
 def run_bubble_sort():
-    from misc import bubble_sort_UI, bubble_sort
+    from miscc import bubble_sort_UI, bubble_sort
     root.execfile('bubble_sort_UI.py')
 
 
 def run_dragon_curve():
-    from misc import DragonCurve
+    from miscc import DragonCurve
     root.execfile('DragonCurve.py')
 
 
 def run_fractal_tree():
-    from misc import FractalTree
+    from miscc import FractalTree
     root.execfile('FractalTree.py')
 
 
 def run_hilbert():
-    from misc import Hilbert
+    from miscc import Hilbert
     root.execfile('Hilbert.py')
 
 
 def run_honeycomb():
-    from misc import honeycomb
+    from miscc import honeycomb
     root.execfile('honeycomb.py')
 
 
 def run_mandelbrot():
-    from misc import InteractiveMandelbrot
+    from miscc import InteractiveMandelbrot
     root.execfile('InteractiveMandelbrot.py')
 
 
 def run_langtons_loop():
-    from misc import langtonloop
+    from miscc import langtonloop
     root.execfile('langtonloop.py')
 
 
 def run_langtons_ant():
-    from misc import LangtonsAnt
+    from miscc import LangtonsAnt
     root.execfile('LangtonsAnt.py')
 
 
 def run_quasi_crystal():
-    from misc import quasicrystal
+    from miscc import quasicrystal
     root.execfile('quasicrystal.py')
 
 
 def run_rainbow_click():
-    from misc import RainbowClick
+    from miscc import RainbowClick
     root.execfile('RainbowClick.py')
 
 
 def run_rainbow_rain():
-    from misc import rainbowrain
+    from miscc import rainbowrain
     root.execfile('rainbowrain.py')
 
 
 def run_rainbow_rain_circle():
-    from misc import rainbowraincircle
+    from miscc import rainbowraincircle
     root.execfile('rainbowraincircle.py')
 
 
 def run_random_fractals():
-    from misc import RandomFractalSpiral
+    from miscc import RandomFractalSpiral
     root.execfile('RandomFractalSpiral.py')
 
 
 def run_siers_triangles():
-    from misc import Sierpinski
+    from miscc import Sierpinski
     root.execfile('Sierpinski.py')
 
 

@@ -61,8 +61,8 @@ def highlightValues(myPen, list, position, color1, color2):
         myPen.begin_fill()
     myPen.end_fill()
 
-    text(myPen,list[position], topLeft_x + position * intDim + 8, topLeft_y + -4 + gap, 20)
-    text(myPen,list[position + 1], topLeft_x + (position + 1) * intDim + 8, topLeft_y + -4 + gap, 20)
+    text(myPen, list[position], topLeft_x + position * intDim + 8, topLeft_y + -4 + gap, 20)
+    text(myPen, list[position + 1], topLeft_x + (position + 1) * intDim + 8, topLeft_y + -4 + gap, 20)
     myPen.getscreen().update()
     if color1 != "#FFFFFF":
         sleep(0.2)
@@ -106,5 +106,5 @@ def run(list):
         topLeft_y = topLeft_y - gap
         myPen.getscreen().update()
         sleep(0.5)
-    text(myPen,"Bubble Sort Complete", topLeft_x, topLeft_y, 20)
+    text(myPen, "Bubble Sort Complete", topLeft_x, topLeft_y, 20)
     myPen.getscreen().update()
