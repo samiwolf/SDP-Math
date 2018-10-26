@@ -4,7 +4,7 @@ import pymc3 as pm
 import matplotlib.pyplot as plt
 import numpy as np
 
-df=pd.read_csv('D:/SDP Math/math/thads2013n.txt',sep=',')  #needs Data Set
+df=pd.read_csv('D:/SDP Math/math_done/thads2013n.txt',sep=',')  #needs Data Set
 df=df[df['BURDEN']>0]
 df=df[df['AGE1']>0]
 
