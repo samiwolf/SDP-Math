@@ -93,6 +93,61 @@ def run_verlet_rigid_body():
     from phy import verlet_rigid_body_mouse
     root.execfile('verlet_rigid_body_mouse.py')
 
+########   Physics 2 Functions   #########
+
+def run_arrow():
+    from phy2 import arrows
+    root.execfile('arrows.py')
+
+def run_balls_lines():
+    from phy2 import balls_and_lines
+    root.execfile('balls_and_lines.py')
+
+def run_box2d_verticle():
+    from phy2 import box2d_vertical_stack
+    root.execfile('box2d_vertical_stack.py')
+
+def run_breakout():
+    from phy2 import breakout
+    root.execfile('breakout.py')
+
+def run_copy_pickle():
+    from phy2 import copy_and_pickle
+    root.execfile('copy_and_pickle.py')
+
+def run_flipper():
+    from phy2 import flipper
+    root.execfile('flipper.py')
+
+def run_deformable():
+    from phy2 import deformable
+    root.execfile('deformable.py')
+
+def run_newtons_cradle():
+    from phy2 import newtons_cradle
+    root.execfile('newtons_cradle.py')
+
+def run_playground():
+    from phy2 import playground
+    root.execfile('playground.py')
+
+def run_point_query():
+    from phy2 import point_query
+    root.execfile('point_query.py')
+
+def run_spiderweb():
+    from phy2 import spiderweb
+    root.execfile('spiderweb.py')
+
+
+
+
+
+
+
+
+
+
 
 ########   Math Functions   #########
 def run_bayesian_regression():
@@ -366,6 +421,141 @@ def physicsmenu():
                    command=lambda: [phyroot.destroy(), recall_window()]).grid()
 
 
+###############################################
+
+def physicsmenu2():
+    root.withdraw()
+    phyroot2 = Tk()
+    phyroot2.title("Academedia - Physics Menu 2")
+    phyroot2.geometry("600x700")
+
+    Label(phyroot2, text="Physics Menu", font="Eurostile 20 bold", padx=200, pady=20).grid()
+
+    b1 = Button(phyroot2,
+                bg="gray",
+                fg="white",
+                text="Arrows",
+                bd=12,
+                relief="raised",
+                font="Calibri 9 bold",
+                command=run_arrow,
+                width=30).grid()
+
+    b2 = Button(phyroot2,
+                bg="gray",
+                fg="white",
+                text="Balls and Lines",
+                bd=12,
+                relief="raised",
+                command=run_balls_lines,
+                font="Calibri 9 bold",
+                width=30).grid()
+
+    b3 = Button(phyroot2,
+                bg="gray",
+                fg="white",
+                text="Box 2D Vertical Stack",
+                bd=12,
+                command=run_box2d_verticle,
+                relief="raised",
+                font="Calibri 9 bold",
+                width=30).grid()
+
+    b4 = Button(phyroot2,
+                bg="gray",
+                fg="white",
+                text="Breakout",
+                bd=12,
+                command=run_breakout,
+                relief="raised",
+                font="Calibri 9 bold",
+                width=30).grid()
+
+    b5 = Button(phyroot2,
+                bg="gray",
+                fg="white",
+                text="Copy & Pickle",
+                bd=12,
+                command=run_copy_pickle,
+                relief="raised",
+                font="Calibri 9 bold",
+                width=30).grid()
+
+    b6 = Button(phyroot2,
+                bg="gray",
+                fg="white",
+                text="Deformable",
+                bd=12,
+                command=run_deformable,
+                relief="raised",
+                font="Calibri 9 bold",
+                width=30).grid()
+
+    b7 = Button(phyroot2,
+                bg="gray",
+                fg="white",
+                text="Flipper",
+                bd=12,
+                command=run_flipper,
+                relief="raised",
+                font="Calibri 9 bold",
+                width=30).grid()
+    '''
+    b8 = Button(phyroot2,
+                bg="gray",
+                fg="white",
+                text="Newton's Cradle",
+                bd=12,
+                command=run_newtons_cradle,
+                relief="raised",
+                font="Calibri 9 bold",
+                width=30).grid()
+    '''
+
+    b9 = Button(phyroot2,
+                bg="gray",
+                fg="white",
+                text="Playground",
+                bd=12,
+                command=run_playground,
+                relief="raised",
+                font="Calibri 9 bold",
+                width=30).grid()
+
+    b10 = Button(phyroot2,
+                 bg="gray",
+                 fg="white",
+                 text="Point Query",
+                 bd=12,
+                 command=run_point_query,
+                 relief="raised",
+                 font="Calibri 9 bold",
+                 width=30).grid()
+
+    b11 = Button(phyroot2,
+                 bg="gray",
+                 fg="white",
+                 text="Spiderweb",
+                 bd=12,
+                 command=run_spiderweb,
+                 relief="raised",
+                 font="Calibri 9 bold",
+                 width=30).grid()
+
+    exitb = Button(phyroot2,
+                   bg="gray",
+                   fg="white",
+                   text="Back",
+                   bd=12,
+                   relief="raised",
+                   font="Calibri 9 bold",
+                   width=10,
+                   command=lambda: [phyroot2.destroy(), recall_window()]).grid()
+
+
+####################################
+
+
 ####################################
 
 def mathsmenu():
@@ -522,15 +712,6 @@ def chemistrysmenu():
     Label(chemroot, text="Chemistry menu will be \nimplemented in the future.\n Sorry for the inconvenience.",
           font="Eurostile 20 bold", padx=97, pady=20).grid()
 
-    exitb = Button(chemroot,
-                   bg="gray",
-                   fg="white",
-                   text="Back",
-                   bd=12,
-                   relief="raised",
-                   font="Calibri 9 bold",
-                   width=30,
-                   command=lambda: [chemroot.destroy(), recall_window()]).grid()
 
     b1 = Button(chemroot,
                 bg="gray",
@@ -590,30 +771,17 @@ def chemistrysmenu():
                 relief="raised",
                 font="Calibri 9 bold",
                 width=30).grid()
-    b8 = Button(chemroot,
-                bg="gray",
-                fg="white",
-                text="Task 3",
-                bd=12,
-                relief="raised",
-                font="Calibri 9 bold",
-                width=30).grid()
-    b9 = Button(chemroot,
-                bg="gray",
-                fg="white",
-                text="Task 3",
-                bd=12,
-                relief="raised",
-                font="Calibri 9 bold",
-                width=30).grid()
-    b10 = Button(chemroot,
-                 bg="gray",
-                 fg="white",
-                 text="Task 3",
-                 bd=12,
-                 relief="raised",
-                 font="Calibri 9 bold",
-                 width=30).grid()
+
+    exitb = Button(chemroot,
+                   bg="gray",
+                   fg="white",
+                   text="Back",
+                   bd=12,
+                   relief="raised",
+                   font="Calibri 9 bold",
+                   width=10,
+                   command=lambda: [chemroot.destroy(), recall_window()]).grid()
+    '''
     b11 = Button(chemroot,
                  bg="gray",
                  fg="white",
@@ -647,7 +815,7 @@ def chemistrysmenu():
     scroll.grid(side='right', fill='y')
     frame.grid(fill='both', expand=1)
     button.grid(ipadx=30)
-
+    '''
     ###############################
 
 
@@ -801,7 +969,7 @@ def missmenu():
                  font="Calibri 9 bold",
                  command=run_random_fractals,
                  width=30).grid()    
-    '''
+    
 
     b14 = Button(misroot,
                  bg="gray",
@@ -812,7 +980,7 @@ def missmenu():
                  font="Calibri 9 bold",
                  command=run_siers_triangles,
                  width=30).grid()
-
+    '''
     exitb = Button(misroot,
                    bg="gray",
                    fg="white",
@@ -835,6 +1003,11 @@ def recall_window():
 button1 = Button(app, text="Physics", bd=12, relief="raised", command=physicsmenu, width=15)
 button1.configure(bg="#00008B", fg="white", font="Calibri 9 bold")
 button1.grid(padx=1, pady=2)
+
+button1 = Button(app, text="Physics 2", bd=12, relief="raised", command=physicsmenu2, width=15)
+button1.configure(bg="#00008B", fg="white", font="Calibri 9 bold")
+button1.grid(padx=1, pady=2)
+
 
 button2 = Button(app, text="Mathematics", bd=12, relief="raised", command=mathsmenu, width=15)
 button2.configure(bg="#8B0000", fg="white", font="Calibri 9 bold")
